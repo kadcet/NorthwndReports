@@ -15,6 +15,7 @@ namespace WinFormUI
 			//Hangi kategoriden kaç TL lik satış yapılmış
 			NorthwndDBContext context = new NorthwndDBContext();
 
+
 			//var report = (from product in context.Products
 			//			  join category in context.Categories
 			//					 on product.CategoryID equals category.CategoryID
