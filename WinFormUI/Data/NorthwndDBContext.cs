@@ -11,7 +11,7 @@ namespace WinFormUI.Data
     {
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {
-            optionsBuilder.UseSqlServer("Server=.;Database=Northwnd;Integrated Security=True;TrustServerCertificate=True");
+            optionsBuilder.UseSqlServer("Server=.;Database=NORTHWND;Integrated Security=True;TrustServerCertificate=True");
         }
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)

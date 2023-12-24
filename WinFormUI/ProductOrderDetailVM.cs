@@ -2,7 +2,8 @@
 {
 	public class ProductOrderDetailVM
 	{
-		public string Count { get; set; }
-		public string ProductName { get; set; }
-	}
+        public string Kategori { get; set; }
+        public string Urun { get; set; }
+        public decimal Fiyat { get; set; }
+    }
 }
