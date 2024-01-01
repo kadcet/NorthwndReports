@@ -40,6 +40,8 @@ namespace WinFormUI
                         join pr in dbContext.Products on ct.CategoryID equals pr.CategoryID
                         join od in dbContext.OrderDetails on pr.ProductID equals od.ProductID
                         group new { ct, pr, od } by new { ct.CategoryName, pr.ProductName } into groupedData
+                        orderby groupedData.Sum(x=>x.od.UnitPrice) // sipariş toplamlarına göre sıralama
+                        //orderby groupedData.Key.CategoryName, groupedData.Key.ProductName    // CategoryName ve ProductName ye göre sıralama
                         select new ProductOrderDetailVM
                         {
                             Kategori = groupedData.Key.CategoryName,
